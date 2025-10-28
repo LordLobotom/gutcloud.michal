@@ -1,0 +1,24 @@
+services:
+  michal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: michal.gutcloud:latest
+    container_name: michal-app
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.michal.rule=Host(`michal.${TRAEFIK_DOMAIN}`)
+      - traefik.http.routers.michal.entrypoints=websecure
+      - traefik.http.routers.michal.tls.certresolver=letsencrypt
+      - traefik.http.services.michal.loadbalancer.server.port=3000
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true
