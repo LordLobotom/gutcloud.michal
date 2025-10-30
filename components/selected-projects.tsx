@@ -5,6 +5,7 @@ const projects = [
       "Lightweight RAG stack for industrial documentation. FastAPI backend for ingest and chunking, embeddings stored in Qdrant, chat UI in Next.js, local LLM served by Ollama. Demonstrates practical AI delivery inside constrained OT environments.",
     outcome: "Clear deployment instructions and guardrails let plant teams validate the workflow without exposing data externally.",
     link: "https://github.com/LordLobotom/MESRAG",
+    linkLabel: "→ GitHub: github.com/LordLobotom/MESRAG",
   },
   {
     name: "ERP ↔ Data Warehouse Integration",
@@ -46,7 +47,7 @@ export function SelectedProjects() {
               {project.link ? (
                 <p className="mt-4 text-sm text-primary underline-offset-4 hover:underline">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    View on GitHub
+                    {project.linkLabel ?? "View project"}
                   </a>
                 </p>
               ) : null}

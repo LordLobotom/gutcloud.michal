@@ -12,17 +12,17 @@ export function Hero() {
         <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
           I design pragmatic systems and keep a hands-on edge — from ERP & SAP integrations to data platforms, industrial apps, and secure, maintainable code.
         </p>
-        <dl className="mt-8 grid gap-4 text-sm text-muted-foreground sm:grid-cols-3">
+        <ul className="mt-8 grid gap-4 text-sm text-muted-foreground sm:grid-cols-3">
           {[
             "Architectures for ERP (SAP), integrations, data warehouses, MES/SCADA",
             "Daily tools: .NET · Python · SQL · UML · GitLab CI/CD · SonarQube",
             "Hybrid/remote from Svitavy, open to CZ/EU",
           ].map((item) => (
-            <div key={item} className="rounded-2xl border border-border bg-card px-5 py-4 shadow-sm">
+            <li key={item} className="rounded-2xl border border-border bg-card px-5 py-4 shadow-sm">
               {item}
-            </div>
+            </li>
           ))}
-        </dl>
+        </ul>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Button asChild size="lg" className="gap-2">
             <a href="mailto:emichalgut@gmail.com?subject=Website%20inquiry">

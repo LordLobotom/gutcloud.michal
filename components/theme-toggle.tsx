@@ -6,9 +6,8 @@ import { Button } from "@/components/ui/button"
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme()
-  const isResolved = typeof resolvedTheme === "string"
   const isDark = resolvedTheme === "dark"
-  const label = isResolved ? (isDark ? "Switch to light mode" : "Switch to dark mode") : "Loading theme preference"
+  const label = isDark ? "Switch to light theme" : "Switch to dark theme"
 
   return (
     <Button
@@ -17,16 +16,15 @@ export function ThemeToggle() {
       size="icon"
       className="h-10 w-10 rounded-full border border-border bg-card"
       onClick={() => {
-        if (!isResolved) return
         setTheme(isDark ? "light" : "dark")
       }}
       aria-label={label}
-      disabled={!isResolved}
     >
-      {isResolved ? (
-        isDark ? <SunMedium className="h-5 w-5" aria-hidden="true" /> : <MoonStar className="h-5 w-5" aria-hidden="true" />
-      ) : (
+      <span className="sr-only">{label}</span>
+      {isDark ? (
         <SunMedium className="h-5 w-5" aria-hidden="true" />
+      ) : (
+        <MoonStar className="h-5 w-5" aria-hidden="true" />
       )}
     </Button>
   )

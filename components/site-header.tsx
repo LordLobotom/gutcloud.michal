@@ -21,7 +21,7 @@ export function SiteHeader() {
       <div className="mx-auto max-w-[900px] px-6 py-6">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="text-base font-semibold tracking-tight text-foreground">
-            Michal Gut · Solution Architect
+            Michal Gut · Solution Architect & Tech Lead
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
             <nav
