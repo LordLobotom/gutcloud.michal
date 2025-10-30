@@ -1,30 +1,55 @@
-# michal.gutcloud
+# Michal Gut — Solution Architect & Tech Lead
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Personal portfolio for positioning Michal Gut as a solution architect / development team lead focused on ERP (SAP), integrations, data platforms, and MES/SCADA. The site is built with Next.js 16, Tailwind CSS, and is deployed via Docker behind Traefik.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/emichalgut-gmailcoms-projects/v0-michal-gutcloud)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/fvlGoPAqx0L)
+## Tech Stack
 
-## Overview
+- Next.js 16 (app router, React 19)
+- Tailwind CSS 4
+- TypeScript (strict mode)
+- Docker + Traefik
+- IBM Plex Sans webfont via `next/font`
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Getting Started
+
+1. Install dependencies once:
+
+   ```bash
+   pnpm install
+   ```
+
+2. Run the development server:
+
+   ```bash
+   pnpm dev
+   ```
+
+   The app runs on [http://localhost:3000](http://localhost:3000) with hot reload.
+
+3. Lint and build before committing:
+
+   ```bash
+   pnpm lint
+   pnpm build
+   ```
 
 ## Deployment
 
-Your project is live at:
+Docker is the deployment path. The repository includes a Compose setup that matches production.
 
-**[https://vercel.com/emichalgut-gmailcoms-projects/v0-michal-gutcloud](https://vercel.com/emichalgut-gmailcoms-projects/v0-michal-gutcloud)**
+```bash
+docker compose build --no-cache
+docker compose up -d
+```
 
-## Build your app
+Traefik routes traffic to the `michal` service on the `traefik-public` network. Keep host rules unique and remove old containers so Traefik doesn’t round-robin outdated images.
 
-Continue building your app on:
+## Environment
 
-**[https://v0.app/chat/projects/fvlGoPAqx0L](https://v0.app/chat/projects/fvlGoPAqx0L)**
+Runtime secrets live in `.env` (not committed). `TRAEFIK_DOMAIN` defines the base domain for host rule labels.
 
-## How It Works
+## Contact
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+- Email: [emichalgut@gmail.com](mailto:emichalgut@gmail.com)
+- LinkedIn: [linkedin.com/in/michal-gut-71791250](https://www.linkedin.com/in/michal-gut-71791250)
+- GitHub: [github.com/LordLobotom](https://github.com/LordLobotom)
