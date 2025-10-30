@@ -4,7 +4,7 @@
 Routes, server actions, and metadata live under `app/`—group features by segment (`app/(marketing)/…`) to keep layouts isolated. Shared UI is in `components/`; cross-cutting helpers and configuration sit in `lib/`. Tailwind globals belong in `styles/`, static assets in `public/`, and container scaffolding (`Dockerfile`, `docker-compose.yml`) mirrors the Vercel runtime.
 
 ## Build, Test, and Development Commands
-Install once with `pnpm install`. `pnpm dev` starts the hot-reloading Next.js 16 server; pair it with `docker compose up web` only when validating the container. `pnpm lint` runs ESLint + type checks (append `-- --fix` for autofix). `pnpm build` compiles the production bundle used by Vercel and Docker, and `pnpm start` serves that bundle for smoke tests.
+Install once with `pnpm install`. Use `pnpm dev` for local development. Run `pnpm lint` (append `-- --fix` for autofix) and `pnpm build` before committing.
 
 ## Coding Style & Naming Conventions
 TypeScript runs in `strict` mode—avoid `any` and prefer explicit returns for server actions and utilities. Components/files use PascalCase, hooks/utilities camelCase, and keep indentation at two spaces. Lean on Tailwind utilities instead of bespoke CSS; if needed, extend them in `styles/globals.css`. Run `pnpm lint -- --fix` before pushing to align with the repo’s ESLint rules.
@@ -16,4 +16,4 @@ A formal suite is not yet checked in, so new work should introduce component spe
 Keep commit subjects imperative and succinct (example: `Add Docker setup for Next.js deployment`) and separate unrelated changes. PRs should link to the relevant issue, include a short narrative, list verification steps (`pnpm lint`, `pnpm build`), and provide screenshots when UI shifts. Wait for the Vercel preview to pass and call out any env or migration changes.
 
 ## Deployment & Environment Notes
-Vercel runs `pnpm build`, so keep builds deterministic and side-effect free. Store secrets in Vercel or `.env.local`, never in git. Docker exposes port 3000; update `docker-compose.yml` when the service graph changes. Keep `components.json` synchronized with v0.app exports to avoid design drift.
+Docker is the deployment target. Rebuild with `docker compose build --no-cache` and restart using `docker compose up -d`. Both staging and production requests come through Traefik on the `traefik-public` network; ensure service labels stay unique per host rule to avoid old containers serving traffic. Secrets belong in `.env` (not in git). Vercel is no longer used.
