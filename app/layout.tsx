@@ -12,22 +12,25 @@ const plex = IBM_Plex_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Michal Gut | Solution Architect",
+  title: "Michal Gut — Solution Architect & Tech Lead (ERP, Integrations, Data, MES/SCADA)",
   description:
-    "Solution Architect specialising in scalable enterprise platforms, integration, and delivery leadership for manufacturing and global enterprises.",
+    "Solution Architect & Development Team Lead with hands-on .NET, Python, SQL. ERP & SAP integrations, data platforms, MES/SCADA, integrations, CI/CD. Hybrid/remote from Svitavy, CZ.",
   keywords: [
     "Solution Architect",
-    "Enterprise Architecture",
-    "Digital Transformation",
-    "Integration",
-    "Manufacturing IT",
+    "Tech Lead",
+    "ERP",
+    "SAP integrations",
+    "Data platforms",
+    "MES",
+    "SCADA",
+    "Integrations",
     "Michal Gut",
   ],
   authors: [{ name: "Michal Gut" }],
   openGraph: {
-    title: "Michal Gut | Solution Architect",
+    title: "Michal Gut — Solution Architect & Tech Lead",
     description:
-      "Designing scalable enterprise architectures that connect IT strategy and execution for manufacturing and global enterprises.",
+      "Solution Architect & Development Team Lead with ERP & SAP integrations, data platforms, MES/SCADA, integrations, CI/CD.",
     url: "https://michal-gutcloud.vercel.app",
     siteName: "Michal Gut Portfolio",
     locale: "en_US",
@@ -35,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Michal Gut | Solution Architect",
+    title: "Michal Gut — Solution Architect & Tech Lead",
     description:
-      "Enterprise Solution Architect aligning technology investments with measurable business value.",
+      "Solution Architect & Development Team Lead with hands-on .NET, Python, SQL. ERP & SAP integrations, data platforms, MES/SCADA, integrations, CI/CD.",
   },
 }
 

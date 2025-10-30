@@ -1,77 +1,48 @@
-const competencies = [
+const capabilities = [
   {
-    title: "Architecture Strategy & Governance",
+    title: "ERP & Integrations (incl. SAP)",
     summary:
-      "Target-state blueprints and capability maps that align corporate objectives, investments, and compliance requirements.",
-    items: ["Business capability modeling", "Architecture guardrails & principles", "Portfolio & risk alignment"],
+      "Integration design, data contracts, API gateways, eventing, resilience, and security across SAP and adjacent enterprise systems.",
   },
   {
-    title: "Application & Integration Platforms",
+    title: "Data Platforms & Warehousing",
     summary:
-      "Composable solutions that connect ERP, MES, and cloud services with reusable patterns and measurable reliability.",
-    items: ["SAP, MES, and OT interoperability", "API-led and event-driven integration", "Workflow automation at scale"],
+      "Data modeling, SQL performance, lineage visibility, and reporting enablement with governance foundations in place.",
   },
   {
-    title: "Data & Intelligence Foundations",
+    title: "MES/SCADA & Industrial Apps",
     summary:
-      "Data products and analytics frameworks that deliver trustworthy insights while respecting governance and lineage.",
-    items: ["Operational analytics design", "Data quality & stewardship standards", "Modern BI enablement"],
+      "Real-time constraints, OT/IT integration, telemetry ingestion, and auditability for plant operations and industrial services.",
   },
   {
-    title: "Delivery Leadership & Assurance",
+    title: "Architecture with Delivery",
     summary:
-      "Architecture authority embedded in delivery teams to accelerate decisions, manage dependencies, and coach execution.",
-    items: ["Program and portfolio steering", "Solution review & design authority", "Vendor and stakeholder alignment"],
+      "UML models, ADRs, threat modeling, CI/CD pipelines, code reviews, and SonarQube gates to keep delivery accountable.",
   },
-]
-
-const certifications = [
-  "Business Analysis: Essential Tools and Techniques",
-  "Advanced SQL Programming in SQL Server",
-  "Docker – Container Application Development & Deployment",
-  "Business Analysis Foundations",
-  "K2 Platform Certification",
+  {
+    title: "AI Prototyping (RAG/LLMs)",
+    summary:
+      "Practical proofs-of-concept with LangChain, Qdrant, and Ollama; developer-assist workflows using Codex-CLI and Claude Code.",
+  },
 ]
 
 export function CoreCompetencies() {
   return (
-    <section id="competencies" className="px-6 py-20">
+    <section id="what-i-do" className="px-6 py-20">
       <div className="mx-auto max-w-[900px]">
-        <h2 className="text-3xl font-semibold text-foreground">Core Competencies</h2>
+        <h2 className="text-3xl font-semibold text-foreground">What I Do</h2>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-          Proven ability to translate strategy into resilient architecture, ensure delivery discipline, and unlock
-          measurable value across enterprise transformation programs.
+          I bridge business goals and engineering reality. I like clear boundaries, clean interfaces, and code you can
+          operate.
         </p>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">
-          {competencies.map((competency) => (
-            <article
-              key={competency.title}
-              className="flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm"
-            >
-              <h3 className="text-xl font-semibold text-foreground">{competency.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{competency.summary}</p>
-              <ul className="mt-5 space-y-2 text-sm text-muted-foreground">
-                {competency.items.map((item) => (
-                  <li key={item} className="flex gap-3">
-                    <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" aria-hidden="true" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+        <div className="mt-10 grid gap-6">
+          {capabilities.map((capability) => (
+            <article key={capability.title} className="rounded-3xl border border-border bg-card p-8 shadow-sm">
+              <h3 className="text-xl font-semibold text-foreground">{capability.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{capability.summary}</p>
             </article>
           ))}
         </div>
-        <aside className="mt-12 rounded-3xl border border-border bg-card p-8 shadow-sm">
-          <h3 className="text-lg font-semibold text-foreground">Selected Certifications</h3>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Continuous learning focused on architecture methods, automation platforms, and enterprise delivery practices.
-          </p>
-          <ul className="mt-4 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
-            {certifications.map((certification) => (
-              <li key={certification}>{certification}</li>
-            ))}
-          </ul>
-        </aside>
       </div>
     </section>
   )

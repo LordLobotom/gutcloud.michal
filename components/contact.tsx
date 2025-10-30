@@ -57,8 +57,8 @@ export function Contact() {
       <div className="mx-auto max-w-[900px]">
         <h2 className="text-3xl font-semibold text-foreground">Contact</h2>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-          Let’s discuss architecture leadership, modernization roadmaps, or integration programs that need an accountable
-          partner from concept to delivery.
+          Let’s talk about architecture leadership, integration programs, or modernization work that needs a practical,
+          accountable partner. I’m open to hybrid or remote engagements from Svitavy, CZ across CZ/EU.
         </p>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
@@ -66,8 +66,8 @@ export function Contact() {
             <div>
               <h3 className="text-lg font-semibold text-foreground">Direct Channels</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                I typically respond within one business day. Please include program context, timeline, and expected
-                outcomes where possible.
+                I typically respond within one business day. Please include program context, timeline, and the outcomes
+                you care about.
               </p>
             </div>
             <ul className="space-y-4 text-sm text-muted-foreground">
@@ -183,7 +183,7 @@ export function Contact() {
         </div>
 
         <footer className="mt-16 border-t border-border/40 pt-8 text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Michal Gut. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Michal Gut. Built with Next.js, Tailwind CSS, Docker.</p>
         </footer>
       </div>
     </section>
