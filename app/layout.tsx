@@ -1,14 +1,9 @@
-import type React from "react"
 import type { Metadata } from "next"
-import { Space_Mono, Inter } from "next/font/google"
+import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
+import { SiteHeader } from "@/components/site-header"
 import "./globals.css"
-
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-mono",
-})
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,20 +12,45 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Michal Gut | Solution Architect",
-  description: "Technical Lead evolving into Solution Architect. Engineering clarity into complex systems.",
-  generator: "v0.app",
+  description:
+    "Solution Architect specialising in scalable enterprise platforms, integration, and delivery leadership for manufacturing and global enterprises.",
+  keywords: [
+    "Solution Architect",
+    "Enterprise Architecture",
+    "Digital Transformation",
+    "Integration",
+    "Manufacturing IT",
+    "Michal Gut",
+  ],
+  authors: [{ name: "Michal Gut" }],
+  openGraph: {
+    title: "Michal Gut | Solution Architect",
+    description:
+      "Designing scalable enterprise architectures that connect IT strategy and execution for manufacturing and global enterprises.",
+    url: "https://michal-gutcloud.vercel.app",
+    siteName: "Michal Gut Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Michal Gut | Solution Architect",
+    description:
+      "Enterprise Solution Architect aligning technology investments with measurable business value.",
+  },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.variable} ${spaceMono.variable} font-sans antialiased`}>
-        {children}
-        <Analytics />
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          <div className="flex min-h-screen flex-col bg-background text-foreground">
+            <SiteHeader />
+            {children}
+            <Analytics />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   )

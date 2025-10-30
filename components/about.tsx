@@ -1,39 +1,46 @@
-import { Card } from "@/components/ui/card"
-
 export function About() {
   return (
-    <section className="py-20 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-mono text-primary">{"> ABOUT"}</h2>
-
-        <Card className="p-8 bg-card/50 backdrop-blur">
-          <div className="space-y-6 text-lg leading-relaxed">
-            <p className="text-pretty">
-              Experienced Technical Lead with a strong background in software architecture, automation, and
-              business-driven technology solutions. Currently leading a development team while progressively expanding
-              my role into technical leadership, solution architecture, and strategic decision-making.
+    <section id="about" className="px-6 py-20">
+      <div className="mx-auto max-w-[900px]">
+        <h2 className="text-3xl font-semibold text-foreground">About</h2>
+        <div className="mt-6 rounded-2xl border border-border/60 bg-card/70 p-10 shadow-sm">
+          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+            <p className="text-foreground">
+              I partner with enterprise leaders to translate business intent into actionable architecture strategies. My
+              background spans solution design, team leadership, and delivery governance across manufacturing, supply
+              chain, and digital transformation programs.
             </p>
-
-            <p className="text-pretty">
-              Passionate about bridging business and technology to drive innovation, process optimization, and
-              cross-functional collaboration. I specialize in transforming complex requirements into elegant, scalable
-              solutions that deliver real business value.
+            <p>
+              At Saint-Gobain ADFORS I lead multidisciplinary teams across SAP, automation, data, and .NET platforms.
+              My focus is on establishing architecture guardrails, accelerating decision cycles, and ensuring platforms
+              scale with compliance and resilience built in.
             </p>
-
-            <div className="pt-4 border-t border-border">
-              <div className="grid md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-muted-foreground">Location:</span>
-                  <span className="ml-2 text-foreground">Svitavy, Czech Republic</span>
-                </div>
-                <div>
-                  <span className="text-muted-foreground">Languages:</span>
-                  <span className="ml-2 text-foreground">Czech (Native), English (Professional)</span>
-                </div>
-              </div>
-            </div>
+            <ul className="space-y-3">
+              <li className="flex gap-3">
+                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" aria-hidden="true" />
+                <span>Bridging business cases with executable roadmaps and measurable KPIs.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" aria-hidden="true" />
+                <span>Guiding platform modernization and integration patterns with security at the core.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-1 h-2 w-2 flex-none rounded-full bg-primary" aria-hidden="true" />
+                <span>Mentoring delivery teams to maintain architectural integrity from discovery to rollout.</span>
+              </li>
+            </ul>
           </div>
-        </Card>
+          <dl className="mt-8 grid gap-6 text-sm text-muted-foreground sm:grid-cols-2">
+            <div>
+              <dt className="font-medium text-foreground">Location</dt>
+              <dd className="mt-1">Svitavy, Czech Republic · CET</dd>
+            </div>
+            <div>
+              <dt className="font-medium text-foreground">Languages</dt>
+              <dd className="mt-1">Czech (native), English (professional working proficiency)</dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </section>
   )

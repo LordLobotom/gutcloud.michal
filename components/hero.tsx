@@ -3,53 +3,68 @@ import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
-      <div className="max-w-4xl w-full">
-        <div className="space-y-6">
-          <div className="inline-block">
-            <span className="text-primary font-mono text-sm tracking-wider">{"> SYSTEM.INITIALIZE()"}</span>
-          </div>
-
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-balance">Michal Gut</h1>
-
-          <div className="space-y-2">
-            <p className="text-xl md:text-2xl text-muted-foreground font-mono">the Architect</p>
-            <p className="text-lg text-muted-foreground max-w-2xl text-pretty leading-relaxed">
-              Engineering clarity into complex systems. From code to architecture – building systems with purpose.
-            </p>
-          </div>
-
-          <div className="pt-4">
-            <blockquote className="border-l-2 border-primary pl-4 italic text-muted-foreground">
-              <p className="text-pretty">
-                {
-                  '"Ergo, vis-à-vis your requests, I have already chosen the optimal solution. Now, you must understand it."'
-                }
-              </p>
-            </blockquote>
-          </div>
-
-          <div className="flex flex-wrap gap-4 pt-6">
-            <Button asChild size="lg" className="gap-2">
-              <a href="https://www.linkedin.com/in/michal-gut-71791250" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-5 w-5" />
-                LinkedIn
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="gap-2 bg-transparent">
-              <a href="https://github.com/LordLobotom" target="_blank" rel="noopener noreferrer">
-                <Github className="h-5 w-5" />
-                GitHub
-              </a>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="gap-2 bg-transparent">
-              <a href="mailto:emichalgut@gmail.com">
-                <Mail className="h-5 w-5" />
-                Contact
-              </a>
-            </Button>
-          </div>
+    <section id="hero" className="px-6 py-24">
+      <div className="mx-auto flex max-w-[900px] flex-col items-center text-center">
+        <p className="text-sm text-muted-foreground sm:text-base">
+          Guiding enterprise platforms from concept to delivery with architecture-first leadership.
+        </p>
+        <h1 className="mt-6 text-6xl font-semibold tracking-tight text-foreground sm:text-7xl md:text-8xl">
+          Michal Gut
+        </h1>
+        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+          Designing scalable enterprise architectures that connect IT strategy and execution. I help global teams turn
+          complex technology investments into measurable outcomes.
+        </p>
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <Button asChild size="lg" className="gap-2">
+            <a href="https://www.linkedin.com/in/michal-gut-71791250" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="h-5 w-5" aria-hidden="true" />
+              Connect on LinkedIn
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="gap-2">
+            <a href="https://github.com/LordLobotom" target="_blank" rel="noopener noreferrer">
+              <Github className="h-5 w-5" aria-hidden="true" />
+              View GitHub
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="gap-2">
+            <a href="#contact">
+              <Mail className="h-5 w-5" aria-hidden="true" />
+              Start a Conversation
+            </a>
+          </Button>
         </div>
+        <dl className="mt-12 grid w-full gap-6 text-left sm:grid-cols-3">
+          {[
+            {
+              label: "Enterprise Programs Guided",
+              value: "12+",
+              variant: "stat",
+            },
+            {
+              label: "Years in Architecture & Delivery",
+              value: "10",
+              variant: "stat",
+            },
+            {
+              label: "Automation & Integration Platforms",
+              value: "SAP · K2 Nintex · Ignition · .NET",
+              variant: "text",
+            },
+          ].map((item) => (
+            <div key={item.label} className="rounded-lg border border-border/60 bg-card/60 p-5 shadow-sm">
+              <dt className="text-sm font-medium text-muted-foreground">{item.label}</dt>
+              <dd
+                className={`mt-2 font-semibold text-foreground ${
+                  item.variant === "stat" ? "text-3xl" : "text-sm leading-6"
+                }`}
+              >
+                {item.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   )

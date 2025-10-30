@@ -1,110 +1,88 @@
-import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+const roles = [
+  {
+    title: "Solution Architect & Software Development Team Lead",
+    company: "Saint-Gobain ADFORS",
+    location: "Litomyšl, Czech Republic",
+    period: "Apr 2022 – Present",
+    impact:
+      "Guiding cross-functional teams across SAP, MES, automation, and analytics to deliver the manufacturing digital thread.",
+    highlights: [
+      "Established architecture governance and technology roadmaps aligned to business capability priorities.",
+      "Led modernization of plant systems—integrating Ignition, K2 Nintex, and SAP to reduce cycle time and manual effort.",
+      "Directed security uplift initiatives covering network segmentation, penetration testing, and NIS2 readiness.",
+    ],
+  },
+  {
+    title: "Software Developer",
+    company: "Saint-Gobain ADFORS",
+    location: "Litomyšl, Czech Republic",
+    period: "May 2015 – Apr 2022",
+    impact:
+      "Delivered business-critical applications and integrations spanning SQL Server, .NET, Python, and mobile platforms.",
+    highlights: [
+      "Built BI and reporting solutions enabling plant and leadership transparency on production KPIs.",
+      "Implemented workflow automation on the K2 platform, streamlining approval chains and compliance tracking.",
+      "Collaborated with global teams to deploy reusable integration assets across the EMEA manufacturing footprint.",
+    ],
+  },
+]
+
+const education = [
+  {
+    school: "Masaryk University, Brno",
+    detail: "B.Sc. Applied Informatics · Graphic Design Specialization",
+    period: "2011 – 2015",
+  },
+  {
+    school: "Gymnasium Svitavy",
+    detail: "General Studies",
+    period: "2006 – 2010",
+  },
+]
 
 export function Experience() {
   return (
-    <section className="py-20 px-4 bg-muted/30">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 font-mono text-primary">{"> EXPERIENCE"}</h2>
-
-        <div className="space-y-6">
-          <Card className="p-8">
-            <div className="space-y-4">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+    <section id="experience" className="px-6 py-20">
+      <div className="mx-auto max-w-[900px]">
+        <h2 className="text-3xl font-semibold text-foreground">Experience</h2>
+        <p className="mt-4 max-w-2xl text-base text-muted-foreground">
+          10 years translating strategy into delivery, partnering with leadership to build platforms the business can
+          trust.
+        </p>
+        <div className="mt-10 space-y-10">
+          {roles.map((role) => (
+            <article key={role.title} className="rounded-2xl border border-border/60 bg-card/70 p-8 shadow-sm">
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-2xl font-bold">Software Development Team Lead</h3>
-                  <p className="text-lg text-primary font-semibold">Saint-Gobain ADFORS</p>
-                  <p className="text-muted-foreground">Litomyšl, Czech Republic</p>
+                  <h3 className="text-xl font-semibold text-foreground">{role.title}</h3>
+                  <p className="text-sm font-medium text-primary">{role.company}</p>
+                  <p className="text-sm text-muted-foreground">{role.location}</p>
                 </div>
-                <Badge variant="secondary" className="self-start">
-                  April 2022 - Present
-                </Badge>
+                <span className="text-sm font-medium text-muted-foreground">{role.period}</span>
               </div>
-
-              <ul className="space-y-2 text-muted-foreground leading-relaxed">
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">
-                    Leading cross-functional teams (K2 Nintex, Ignition, BI, SAP, .NET, Python) while driving strategic
-                    technical decisions, automation, and architecture improvements
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">
-                    Developing long-term IT strategy and conducting system studies for digital transformation
-                    initiatives
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">
-                    Implementing scalable solutions improving system efficiency and process automation
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">
-                    Bridging development, data, and business processes to enhance technology strategy
-                  </span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">
-                    Managing security initiatives including penetration testing, network segmentation, and NIS2
-                    compliance preparation
-                  </span>
-                </li>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{role.impact}</p>
+              <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
+                {role.highlights.map((highlight) => (
+                  <li key={highlight} className="flex gap-3">
+                    <span className="mt-2 h-2 w-2 flex-none rounded-full bg-primary" aria-hidden="true" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-          </Card>
-
-          <Card className="p-8">
-            <div className="space-y-4">
-              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
-                <div>
-                  <h3 className="text-2xl font-bold">Software Developer</h3>
-                  <p className="text-lg text-primary font-semibold">Saint-Gobain ADFORS</p>
-                  <p className="text-muted-foreground">Litomyšl, Czech Republic</p>
-                </div>
-                <Badge variant="secondary" className="self-start">
-                  May 2015 - April 2022
-                </Badge>
-              </div>
-
-              <ul className="space-y-2 text-muted-foreground leading-relaxed">
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">Full-stack development using MS SQL, Visual Studio, Git</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">Technologies: SQL, .NET C#, Xamarin, WPF, Python, JavaScript</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="text-primary mt-1">⚡</span>
-                  <span className="text-pretty">K2 BPM (Nintex) workflow development and automation</span>
-                </li>
-              </ul>
-            </div>
-          </Card>
+            </article>
+          ))}
         </div>
-
-        <div className="mt-8">
-          <Card className="p-6 bg-primary/5 border-primary/20">
-            <h3 className="text-xl font-bold mb-4">Education</h3>
-            <div className="space-y-4">
-              <div>
-                <p className="font-semibold">Bachelor's Degree (Bc.) in Applied Informatics</p>
-                <p className="text-sm text-muted-foreground">Specialization: Graphic Design</p>
-                <p className="text-sm text-muted-foreground">Masaryk University Brno • 2011 - 2015</p>
-              </div>
-              <div>
-                <p className="font-semibold">Gymnasium Svitavy</p>
-                <p className="text-sm text-muted-foreground">2006 - 2010</p>
-              </div>
-            </div>
-          </Card>
+        <div className="mt-12 rounded-2xl border border-border/60 bg-background/80 p-8 shadow-sm">
+          <h3 className="text-lg font-semibold text-foreground">Education</h3>
+          <ul className="mt-4 space-y-4 text-sm text-muted-foreground">
+            {education.map((item) => (
+              <li key={item.school}>
+                <p className="font-medium text-foreground">{item.school}</p>
+                <p>{item.detail}</p>
+                <p>{item.period}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
