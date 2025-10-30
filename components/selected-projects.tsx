@@ -36,7 +36,7 @@ const projects = [
 
 export function SelectedProjects() {
   return (
-    <section id="projects" className="bg-muted/30 px-6 py-20">
+    <section id="projects" className="px-6 py-20">
       <div className="mx-auto max-w-[900px]">
         <h2 className="text-3xl font-semibold text-foreground">Selected Projects</h2>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
@@ -44,7 +44,7 @@ export function SelectedProjects() {
         </p>
         <div className="mt-10 space-y-8">
           {projects.map((project) => (
-            <article key={project.name} className="rounded-2xl border border-border/60 bg-card/70 p-8 shadow-sm">
+            <article key={project.name} className="rounded-3xl border border-border bg-card p-8 shadow-sm">
               <header className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
                 <h3 className="text-xl font-semibold text-foreground">{project.name}</h3>
                 <p className="text-sm font-medium text-primary">{project.industry}</p>

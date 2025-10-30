@@ -10,7 +10,7 @@ const navigation = [
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-40 border-b border-border/40 bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <a
         href="#hero"
         className="sr-only focus:not-sr-only focus:absolute focus:left-6 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-sm focus:text-primary-foreground"

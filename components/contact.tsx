@@ -62,7 +62,7 @@ export function Contact() {
         </p>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <div className="space-y-8 rounded-2xl border border-border/60 bg-card/70 p-8 shadow-sm">
+          <div className="space-y-8 rounded-3xl border border-border bg-card p-8 shadow-sm">
             <div>
               <h3 className="text-lg font-semibold text-foreground">Direct Channels</h3>
               <p className="mt-3 text-sm text-muted-foreground">
@@ -104,7 +104,7 @@ export function Contact() {
 
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-6 rounded-2xl border border-border/60 bg-card/70 p-8 shadow-sm"
+            className="flex flex-col gap-6 rounded-3xl border border-border bg-card p-8 shadow-sm"
             aria-describedby={status !== "idle" ? "contact-status" : undefined}
           >
             <div>
@@ -117,7 +117,7 @@ export function Contact() {
                 type="text"
                 autoComplete="name"
                 required
-                className="mt-2 w-full rounded-lg border border-border/80 bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/70"
               />
             </div>
             <div>
@@ -130,7 +130,7 @@ export function Contact() {
                 type="email"
                 autoComplete="email"
                 required
-                className="mt-2 w-full rounded-lg border border-border/80 bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/70"
               />
             </div>
             <div>
@@ -142,7 +142,7 @@ export function Contact() {
                 name="company"
                 type="text"
                 autoComplete="organization"
-                className="mt-2 w-full rounded-lg border border-border/80 bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/70"
               />
             </div>
             <div>
@@ -154,7 +154,7 @@ export function Contact() {
                 name="message"
                 required
                 rows={5}
-                className="mt-2 w-full resize-none rounded-lg border border-border/80 bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                className="mt-2 w-full resize-none rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/70"
               />
             </div>
             <Button

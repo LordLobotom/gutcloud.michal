@@ -15,7 +15,7 @@ export function ThemeToggle() {
       type="button"
       variant="outline"
       size="icon"
-      className="h-10 w-10 rounded-full border-border/70 bg-background/80"
+      className="h-10 w-10 rounded-full border border-border bg-card"
       onClick={() => {
         if (!isResolved) return
         setTheme(isDark ? "light" : "dark")

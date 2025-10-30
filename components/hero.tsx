@@ -3,16 +3,16 @@ import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
-    <section id="hero" className="px-6 py-24">
+    <section id="hero" className="px-6 py-28">
       <div className="mx-auto flex max-w-[900px] flex-col items-center text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary sm:text-base">Solution Architect</p>
-        <h1 className="mt-4 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.32em] text-primary sm:text-sm">Solution Architect</p>
+        <h1 className="mt-5 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl md:text-7xl">
           Michal Gut
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
           Designing scalable enterprise architectures that connect IT strategy and execution.
         </p>
-        <p className="mt-4 max-w-2xl text-base text-muted-foreground">
+        <p className="mt-4 max-w-2xl text-base leading-8 text-muted-foreground">
           Architecture-first leadership for manufacturing and global enterprises—bridging strategic roadmaps, delivery
           disciplines, and secure platform execution.
         </p>
@@ -54,11 +54,11 @@ export function Hero() {
               variant: "text",
             },
           ].map((item) => (
-            <div key={item.label} className="rounded-lg border border-border/60 bg-card/60 p-5 shadow-sm">
-              <dt className="text-sm font-medium text-muted-foreground">{item.label}</dt>
+            <div key={item.label} className="rounded-2xl border border-border bg-card p-6 shadow-sm">
+              <dt className="text-sm font-medium uppercase tracking-wide text-muted-foreground">{item.label}</dt>
               <dd
                 className={`mt-2 font-semibold text-foreground ${
-                  item.variant === "stat" ? "text-3xl" : "text-sm leading-6"
+                  item.variant === "stat" ? "text-4xl" : "text-sm leading-6"
                 }`}
               >
                 {item.value}

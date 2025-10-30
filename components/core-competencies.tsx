@@ -35,7 +35,7 @@ const certifications = [
 
 export function CoreCompetencies() {
   return (
-    <section id="competencies" className="bg-muted/30 px-6 py-20">
+    <section id="competencies" className="px-6 py-20">
       <div className="mx-auto max-w-[900px]">
         <h2 className="text-3xl font-semibold text-foreground">Core Competencies</h2>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
@@ -46,7 +46,7 @@ export function CoreCompetencies() {
           {competencies.map((competency) => (
             <article
               key={competency.title}
-              className="flex flex-col rounded-2xl border border-border/60 bg-card/70 p-8 shadow-sm"
+              className="flex flex-col rounded-3xl border border-border bg-card p-8 shadow-sm"
             >
               <h3 className="text-xl font-semibold text-foreground">{competency.title}</h3>
               <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{competency.summary}</p>
@@ -61,7 +61,7 @@ export function CoreCompetencies() {
             </article>
           ))}
         </div>
-        <aside className="mt-12 rounded-2xl border border-border/60 bg-background/80 p-8 shadow-sm">
+        <aside className="mt-12 rounded-3xl border border-border bg-card p-8 shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">Selected Certifications</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Continuous learning focused on architecture methods, automation platforms, and enterprise delivery practices.

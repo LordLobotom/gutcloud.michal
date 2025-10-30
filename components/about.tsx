@@ -3,7 +3,7 @@ export function About() {
     <section id="about" className="px-6 py-20">
       <div className="mx-auto max-w-[900px]">
         <h2 className="text-3xl font-semibold text-foreground">About</h2>
-        <div className="mt-6 rounded-2xl border border-border/60 bg-card/70 p-10 shadow-sm">
+        <div className="mt-6 rounded-3xl border border-border bg-card p-12 shadow-sm">
           <div className="grid gap-10 lg:grid-cols-[2fr_1fr]">
             <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
               <p className="text-foreground">
@@ -18,11 +18,11 @@ export function About() {
               </p>
               <div>
                 <h3 className="text-sm font-semibold uppercase tracking-wide text-foreground/80">Practice Anchors</h3>
-                <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-                  <li>Business & capability architecture aligned to strategic outcomes and investment cases.</li>
-                  <li>Application, integration, and data patterns engineered for reuse, security, and observability.</li>
-                  <li>Technology and OT platforms modernized with compliance, resilience, and lifecycle discipline.</li>
-                  <li>Delivery governance that connects portfolio priorities with accountable, empowered teams.</li>
+                <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                  <li className="leading-relaxed">Business & capability architecture aligned to strategic outcomes and investment cases.</li>
+                  <li className="leading-relaxed">Application, integration, and data patterns engineered for reuse, security, and observability.</li>
+                  <li className="leading-relaxed">Technology and OT platforms modernized with compliance, resilience, and lifecycle discipline.</li>
+                  <li className="leading-relaxed">Delivery governance that connects portfolio priorities with accountable, empowered teams.</li>
                 </ul>
               </div>
             </div>

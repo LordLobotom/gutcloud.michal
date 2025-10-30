@@ -51,7 +51,7 @@ export function Experience() {
         </p>
         <div className="mt-10 space-y-10">
           {roles.map((role) => (
-            <article key={role.title} className="rounded-2xl border border-border/60 bg-card/70 p-8 shadow-sm">
+            <article key={role.title} className="rounded-3xl border border-border bg-card p-8 shadow-sm">
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h3 className="text-xl font-semibold text-foreground">{role.title}</h3>
@@ -72,7 +72,7 @@ export function Experience() {
             </article>
           ))}
         </div>
-        <div className="mt-12 rounded-2xl border border-border/60 bg-background/80 p-8 shadow-sm">
+        <div className="mt-12 rounded-3xl border border-border bg-card p-8 shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">Education</h3>
           <ul className="mt-4 space-y-4 text-sm text-muted-foreground">
             {education.map((item) => (
