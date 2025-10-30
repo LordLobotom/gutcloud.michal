@@ -26,7 +26,7 @@ export function ThemeToggle() {
       {isResolved ? (
         isDark ? <SunMedium className="h-5 w-5" aria-hidden="true" /> : <MoonStar className="h-5 w-5" aria-hidden="true" />
       ) : (
-        <SunMedium className="h-5 w-5 animate-pulse" aria-hidden="true" />
+        <SunMedium className="h-5 w-5" aria-hidden="true" />
       )}
     </Button>
   )

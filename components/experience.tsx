@@ -5,11 +5,11 @@ const roles = [
     location: "Litomyšl, Czech Republic",
     period: "Apr 2022 – Present",
     impact:
-      "Guiding cross-functional teams across SAP, MES, automation, and analytics to deliver the manufacturing digital thread.",
+      "Architecture lead for the manufacturing digital thread, orchestrating SAP, MES, automation, and analytics programs.",
     highlights: [
-      "Established architecture governance and technology roadmaps aligned to business capability priorities.",
-      "Led modernization of plant systems—integrating Ignition, K2 Nintex, and SAP to reduce cycle time and manual effort.",
-      "Directed security uplift initiatives covering network segmentation, penetration testing, and NIS2 readiness.",
+      "Defined capability-aligned roadmaps covering business, application, and technology layers with measurable KPIs.",
+      "Integrated Ignition, K2 Nintex, and SAP into a governed platform, reducing manual touchpoints and improving traceability.",
+      "Led OT security uplift—network segmentation, penetration testing, and NIS2 operational readiness for critical plants.",
     ],
   },
   {
@@ -18,11 +18,11 @@ const roles = [
     location: "Litomyšl, Czech Republic",
     period: "May 2015 – Apr 2022",
     impact:
-      "Delivered business-critical applications and integrations spanning SQL Server, .NET, Python, and mobile platforms.",
+      "Delivered enterprise applications and integrations across SQL Server, .NET, Python, and mobile platforms supporting production operations.",
     highlights: [
-      "Built BI and reporting solutions enabling plant and leadership transparency on production KPIs.",
-      "Implemented workflow automation on the K2 platform, streamlining approval chains and compliance tracking.",
-      "Collaborated with global teams to deploy reusable integration assets across the EMEA manufacturing footprint.",
+      "Constructed BI services providing near real-time visibility of production KPIs for plant leaders and corporate finance.",
+      "Automated multi-step approvals on the K2 platform, embedding compliance checkpoints in the order-to-cash lifecycle.",
+      "Delivered reusable integration services adopted across the EMEA footprint, accelerating subsequent rollouts.",
     ],
   },
 ]
@@ -46,8 +46,8 @@ export function Experience() {
       <div className="mx-auto max-w-[900px]">
         <h2 className="text-3xl font-semibold text-foreground">Experience</h2>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-          10 years translating strategy into delivery, partnering with leadership to build platforms the business can
-          trust.
+          10 years translating strategy into delivery—shaping architecture, guiding teams, and establishing the guardrails
+          required for dependable enterprise platforms.
         </p>
         <div className="mt-10 space-y-10">
           {roles.map((role) => (

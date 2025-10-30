@@ -3,34 +3,34 @@ const projects = [
     name: "Global Manufacturing Analytics Platform",
     industry: "Advanced Materials · EMEA",
     summary:
-      "Consolidated plant-floor, ERP, and quality data into a governed model used by operations and corporate finance.",
+      "Established a governed analytics foundation that unified plant-floor, ERP, and quality data with enterprise guardrails.",
     outcomes: [
-      "Cut reporting cycles from weekly to near real time with automated data pipelines and standardized KPIs.",
-      "Delivered executive-ready dashboards adopted across 6 plants within the first quarter.",
+      "Cut reporting cycles from weekly to near real time through automated pipelines and standardized KPI definitions.",
+      "Delivered executive-ready dashboards adopted across six plants within the first quarter.",
     ],
-    technology: "Azure, SAP, Power BI, Python, SQL Server, Ignition",
+    technology: "Azure · SAP · Power BI · Python · SQL Server · Ignition",
   },
   {
     name: "Order-to-Cash Automation Program",
     industry: "Industrial Manufacturing · Europe & North America",
     summary:
-      "Redesigned the customer order orchestration flow, bringing legacy BPM, SAP, and CRM systems into a unified workflow.",
+      "Redesigned the order orchestration landscape, aligning legacy BPM, SAP, and CRM workflows under a governed architecture.",
     outcomes: [
-      "Reduced manual interventions by 40% through event-driven integrations and automated exception handling.",
-      "Introduced architecture guardrails and reusable APIs adopted by three regional business units.",
+      "Reduced manual interventions by 40% via event-driven integrations and automated exception handling.",
+      "Introduced reusable APIs and architecture guardrails adopted by three regional business units.",
     ],
-    technology: "K2 Nintex, SAP, .NET, REST APIs, Docker",
+    technology: "K2 Nintex · SAP · .NET · REST APIs · Docker",
   },
   {
     name: "Operational Technology Security Uplift",
     industry: "Manufacturing · EMEA",
     summary:
-      "Led a multi-year security initiative to modernize OT network zones and harden plant applications against NIS2.",
+      "Led a multi-year security initiative to modernize OT network zones and harden plant applications ahead of NIS2.",
     outcomes: [
       "Implemented segmented network design with continuous monitoring and incident response workflows.",
       "Established secure development lifecycle and vendor onboarding standards adopted across the division.",
     ],
-    technology: "Cisco, Fortinet, OT Monitoring, Secure SDLC Playbooks",
+    technology: "Cisco · Fortinet · OT Monitoring · Secure SDLC Playbooks",
   },
 ]
 
@@ -59,7 +59,7 @@ export function SelectedProjects() {
                 ))}
               </ul>
               <p className="mt-5 text-xs uppercase tracking-wide text-muted-foreground">
-                Technology & Approach · <span className="font-medium text-foreground">{project.technology}</span>
+                Architecture Focus · <span className="font-medium text-foreground">{project.technology}</span>
               </p>
             </article>
           ))}

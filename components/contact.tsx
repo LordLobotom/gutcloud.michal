@@ -57,8 +57,8 @@ export function Contact() {
       <div className="mx-auto max-w-[900px]">
         <h2 className="text-3xl font-semibold text-foreground">Contact</h2>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-          Let’s talk about modernizing operations, scaling digital platforms, or building a roadmap that connects
-          technology with measurable business value.
+          Let’s discuss architecture leadership, modernization roadmaps, or integration programs that need an accountable
+          partner from concept to delivery.
         </p>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_1.2fr]">
@@ -66,7 +66,7 @@ export function Contact() {
             <div>
               <h3 className="text-lg font-semibold text-foreground">Direct Channels</h3>
               <p className="mt-3 text-sm text-muted-foreground">
-                I typically respond within one business day. Please include project context, timeline, and expected
+                I typically respond within one business day. Please include program context, timeline, and expected
                 outcomes where possible.
               </p>
             </div>

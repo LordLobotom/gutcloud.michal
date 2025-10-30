@@ -5,15 +5,16 @@ export function Hero() {
   return (
     <section id="hero" className="px-6 py-24">
       <div className="mx-auto flex max-w-[900px] flex-col items-center text-center">
-        <p className="text-sm text-muted-foreground sm:text-base">
-          Guiding enterprise platforms from concept to delivery with architecture-first leadership.
-        </p>
-        <h1 className="mt-6 text-6xl font-semibold tracking-tight text-foreground sm:text-7xl md:text-8xl">
+        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary sm:text-base">Solution Architect</p>
+        <h1 className="mt-4 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl md:text-7xl">
           Michal Gut
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Designing scalable enterprise architectures that connect IT strategy and execution. I help global teams turn
-          complex technology investments into measurable outcomes.
+          Designing scalable enterprise architectures that connect IT strategy and execution.
+        </p>
+        <p className="mt-4 max-w-2xl text-base text-muted-foreground">
+          Architecture-first leadership for manufacturing and global enterprises—bridging strategic roadmaps, delivery
+          disciplines, and secure platform execution.
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Button asChild size="lg" className="gap-2">

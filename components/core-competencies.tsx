@@ -1,23 +1,27 @@
 const competencies = [
   {
-    title: "Enterprise Architecture",
-    summary: "Target-state design, capability mapping, and roadmaps that align technology to business outcomes.",
-    items: ["Operating model definition", "Architecture governance & guardrails", "Platform modernization plans"],
+    title: "Architecture Strategy & Governance",
+    summary:
+      "Target-state blueprints and capability maps that align corporate objectives, investments, and compliance requirements.",
+    items: ["Business capability modeling", "Architecture guardrails & principles", "Portfolio & risk alignment"],
   },
   {
-    title: "Integration & Automation",
-    summary: "Connecting OT, ERP, and cloud platforms to streamline data flow and reduce manual effort.",
-    items: ["SAP and MES integration", "Workflow automation (K2 Nintex)", "Event-driven and API-led patterns"],
+    title: "Application & Integration Platforms",
+    summary:
+      "Composable solutions that connect ERP, MES, and cloud services with reusable patterns and measurable reliability.",
+    items: ["SAP, MES, and OT interoperability", "API-led and event-driven integration", "Workflow automation at scale"],
   },
   {
-    title: "Data & Insights",
-    summary: "Enabling reliable, trusted data for operations and leadership through resilient pipelines.",
-    items: ["BI solution design", "Data quality and lineage controls", "Analytics platform enablement"],
+    title: "Data & Intelligence Foundations",
+    summary:
+      "Data products and analytics frameworks that deliver trustworthy insights while respecting governance and lineage.",
+    items: ["Operational analytics design", "Data quality & stewardship standards", "Modern BI enablement"],
   },
   {
-    title: "Delivery Leadership",
-    summary: "Leading cross-functional teams with clear architecture direction and measurable execution.",
-    items: ["Portfolio prioritization", "Solution design authority", "Vendor and stakeholder alignment"],
+    title: "Delivery Leadership & Assurance",
+    summary:
+      "Architecture authority embedded in delivery teams to accelerate decisions, manage dependencies, and coach execution.",
+    items: ["Program and portfolio steering", "Solution review & design authority", "Vendor and stakeholder alignment"],
   },
 ]
 
@@ -57,14 +61,17 @@ export function CoreCompetencies() {
             </article>
           ))}
         </div>
-        <div className="mt-12 rounded-2xl border border-border/60 bg-background/80 p-8 shadow-sm">
+        <aside className="mt-12 rounded-2xl border border-border/60 bg-background/80 p-8 shadow-sm">
           <h3 className="text-lg font-semibold text-foreground">Selected Certifications</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Continuous learning focused on architecture methods, automation platforms, and enterprise delivery practices.
+          </p>
           <ul className="mt-4 grid gap-2 text-sm text-muted-foreground sm:grid-cols-2">
             {certifications.map((certification) => (
               <li key={certification}>{certification}</li>
             ))}
           </ul>
-        </div>
+        </aside>
       </div>
     </section>
   )
