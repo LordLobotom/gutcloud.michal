@@ -25,17 +25,6 @@ export function Hero() {
         </ul>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <Button asChild size="lg" className="gap-2">
-            <a href="mailto:emichalgut@gmail.com?subject=Website%20inquiry">
-              <Mail className="h-5 w-5" aria-hidden="true" />
-              Contact me
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="gap-2">
-            <a href="#projects">
-              View projects
-            </a>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="gap-2">
             <a href="https://www.linkedin.com/in/michal-gut-71791250" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5" aria-hidden="true" />
               LinkedIn
@@ -45,6 +34,17 @@ export function Hero() {
             <a href="https://github.com/LordLobotom" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" aria-hidden="true" />
               GitHub
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="gap-2">
+            <a href="#projects">
+              View projects
+            </a>
+          </Button>
+          <Button asChild variant="outline" size="lg" className="gap-2">
+            <a href="mailto:emichalgut@gmail.com?subject=Website%20inquiry">
+              <Mail className="h-5 w-5" aria-hidden="true" />
+              Contact me
             </a>
           </Button>
         </div>
