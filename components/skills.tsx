@@ -17,7 +17,7 @@ const skills = [
   },
   {
     label: "AI / RAG (POCs)",
-    value: "LangChain, Qdrant, Ollama, Codex-CLI, Claude Code",
+    value: "LangChain, Qdrant, Ollama, Codex-CLI, Claude Code, Gemini",
   },
   {
     label: "Domains",

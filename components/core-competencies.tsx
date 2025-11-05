@@ -22,7 +22,7 @@ const capabilities = [
   {
     title: "AI Prototyping (RAG/LLMs)",
     summary:
-      "Practical proofs-of-concept with LangChain, Qdrant, and Ollama; developer-assist workflows using Codex-CLI and Claude Code.",
+      "Practical proofs-of-concept with LangChain, Qdrant, and Ollama; developer-assist workflows using Codex-CLI, Claude Code, and Gemini.",
   },
 ]
 
