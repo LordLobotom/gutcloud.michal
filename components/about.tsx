@@ -10,6 +10,12 @@ export function About() {
             stakeholders, modeling data properly, and making trade-offs explicit. I prototype with AI to accelerate
             discovery, but I ship only what helps the system.
           </p>
+          <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+            Lately, I’m focusing on and experimenting with AI/LLMs (zejména ve vývoji) — building developer workflows
+            with Codex-CLI, Claude Code, and Gemini, and exploring where agentic patterns make delivery faster and
+            safer. This site itself runs on a VPS and is built and managed via coding agents in the CLI. I’m actively
+            exploring new technologies and their practical applications in business.
+          </p>
         </div>
       </div>
     </section>

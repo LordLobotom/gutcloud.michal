@@ -17,3 +17,5 @@ Keep commit subjects imperative and succinct (example: `Add Docker setup for Nex
 
 ## Deployment & Environment Notes
 Docker is the deployment target. Rebuild with `docker compose build --no-cache` and restart using `docker compose up -d`. Both staging and production requests come through Traefik on the `traefik-public` network; ensure service labels stay unique per host rule to avoid old containers serving traffic. Secrets belong in `.env` (not in git). Vercel is no longer used.
+
+IMPORTANT: Never open or read `.env` files in this repo—use `.env.example` for configuration context. Keep `.env` local-only and ensure it remains gitignored.

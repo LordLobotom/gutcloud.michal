@@ -1,8 +1,13 @@
 const capabilities = [
   {
-    title: "ERP & Integrations (incl. SAP)",
+    title: "Architecture with Delivery",
     summary:
-      "Integration design, data contracts, API gateways, eventing, resilience, and security across SAP and adjacent enterprise systems.",
+      "UML models, ADRs, threat modeling, CI/CD pipelines, code reviews, and SonarQube gates to keep delivery accountable.",
+  },
+  {
+    title: "AI Prototyping (RAG/LLMs)",
+    summary:
+      "Practical proofs-of-concept with LangChain, Qdrant, and Ollama; developer-assist workflows using Codex-CLI, Claude Code, and Gemini.",
   },
   {
     title: "Data Platforms & Warehousing",
@@ -15,14 +20,9 @@ const capabilities = [
       "Real-time constraints, OT/IT integration, telemetry ingestion, and auditability for plant operations and industrial services.",
   },
   {
-    title: "Architecture with Delivery",
+    title: "ERP & Integrations (incl. SAP)",
     summary:
-      "UML models, ADRs, threat modeling, CI/CD pipelines, code reviews, and SonarQube gates to keep delivery accountable.",
-  },
-  {
-    title: "AI Prototyping (RAG/LLMs)",
-    summary:
-      "Practical proofs-of-concept with LangChain, Qdrant, and Ollama; developer-assist workflows using Codex-CLI and Claude Code.",
+      "Integration design, data contracts, API gateways, eventing, resilience, and security across SAP and adjacent enterprise systems.",
   },
 ]
 
